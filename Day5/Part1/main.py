@@ -61,15 +61,7 @@ def main():
         humidityMapping.append(useMap(temperature, temperatureToHumidityMap))
       for humidity in humidityMapping:
         locationMapping.append(useMap(humidity, humidityToLocationMap))
-      
-      # print(f'Initial seed: {initialSeeds}')
-      # print(f'soil: {soilMapping}')
-      # print(f'fertilizer: {fertilizerMapping}')
-      # print(f'water: {waterMapping}')
-      # print(f'light: {lightMapping}')
-      # print(f'temperature: {temperatureMapping}')
-      # print(f'humidity: {humidityMapping}')
-      # print(f'location: {locationMapping}')
+
       print(min(locationMapping))
       
       
