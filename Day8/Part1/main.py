@@ -15,16 +15,14 @@ def main():
       i = 0
       currentNode = 'AAA'
       while True:
-        options = re.findall(r'(\w+)', nodeNetwork[currentNode])
-        left = options[0]
-        right = options[1]
-        if instructions[i%len(instructions)] == 'R':
-          currentNode = right
-        else:
-          currentNode = left
-        if currentNode == 'ZZZ':
-          break
-        i += 1
+          left, right = re.findall(r'(\w+)', nodeNetwork[currentNode])
+          if instructions[i%len(instructions)] == 'R':
+            currentNode = right
+          else:
+            currentNode = left
+          if currentNode == 'ZZZ':
+            break
+          i += 1
       
       print(i+1)
       
